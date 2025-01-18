@@ -1,67 +1,15 @@
-body {
-  margin: 0;
-  padding: 0;
-  /* background: #000; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
 .gradient-text {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 100px;
-  font-weight: 800;
-  letter-spacing: 1px;
   text-align: center;
-  background: linear-gradient(
-    135deg,
-    #ff00d2,
-    #fed90f,
-    #00a2ff,
-    #09f1b8,
-    #ff00d2,
-    #fed90f,
-    #00a2ff,
-    #09f1b8
-  );
+  font-weight: bold;
+  font-size: 100px;
+  background: linear-gradient(45deg, #06231d 0%, #076653 70%, #06231d 85%);
+  background-size: 500% 300%;
+  background-position: left;
+  transition: background 0.4s ease;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-size: 300% 300%;
-  animation: gradient 8s ease-in-out infinite;
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.test {
-  font-weight: 800;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 90px;
-  background: linear-gradient(
-    45deg,
-    black 0%,
-    black 49%,
-    #8d8484 54%,
-    black 54%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-position: 0% 50%;
-  background-size: 300% 300%;
-  /* animation: gradient 3s ease-in-out infinite; */
-  transition: background 1s ease;
-}
-.test:hover {
-  background-position: 100% 50%;
+.gradient-text:hover {
+  background-position: right;
 }
