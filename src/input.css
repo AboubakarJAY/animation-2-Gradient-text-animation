@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@layer components {
+  .reflet-animation {
+    background-size: 500% 300%;
+  }
+}
+
+@layer utilities {
+  .custom-gradient {
+    background: linear-gradient(
+      45deg,
+      #000000 0%,
+      #000000 60%,
+      #dfe5e3 70%,
+      #000000 85%
+    );
+    background-size: 500% 300%;
+    background-clip: text;
+    background-position: left;
+    -webkit-text-fill-color: transparent;
+    &:hover {
+      animation: reflectAnimation 2s ease forwards;
+    }
+  }
+}
+
+@keyframes reflectAnimation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: 150% 0;
+  }
+}

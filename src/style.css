@@ -5,11 +5,19 @@
   background: linear-gradient(45deg, #06231d 0%, #076653 70%, #06231d 85%);
   background-size: 500% 300%;
   background-position: left;
-  transition: background 0.4s ease;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+@keyframes reflectAnimation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
 .gradient-text:hover {
-  background-position: right;
+  animation: reflectAnimation 0.4s ease forwards; /* Appliquer l'animation au survol */
 }
